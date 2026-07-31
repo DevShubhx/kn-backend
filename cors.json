@@ -1,0 +1,23 @@
+[
+  {
+    "corsRuleName": "AllowLocalhostReact",
+    "allowedOrigins": [
+      "http://localhost:3000",
+      "http://localhost:5173"
+    ],
+    "allowedOperations": [
+      "b2_download_file_by_name",
+      "b2_download_file_by_id"
+    ],
+    "allowedHeaders": [
+      "range",
+      "x-bz-content-sha1"
+    ],
+    "exposeHeaders": [
+      "content-range",
+      "content-length",
+      "accept-ranges"
+    ],
+    "maxAgeSeconds": 3600
+  }
+]
