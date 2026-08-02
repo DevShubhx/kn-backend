@@ -100,6 +100,7 @@ app.use('/api/theatre', require('./routes/theatreRoutes'));
 app.use('/api/chat', chatRouter); 
 app.use('/api/poll', require('./routes/pollRoutes'));
 app.use('/api/new-shows', require('./routes/newShowRoutes'));
+app.use('/api/weekly-schedule', require('./routes/scheduleRoutes'));
 
 // Base Diagnostic Route
 app.get('/', (req, res) => {
