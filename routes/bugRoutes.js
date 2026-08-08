@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const ScreenBug = require('../models/ScreenBug');
+const ScreenBug = require('../models/screenBug');
 const { protectAdmin } = require('../middleware/authMiddleware'); // यदि एडमिन लॉक है
 
 // 📡 पब्लिक रूट: रिएक्ट प्लेयर इस एपीआई को हर 2 सेकंड में बैकग्राउंड में पोल (Fetch) करेगा
