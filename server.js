@@ -153,7 +153,7 @@ io.on('connection', (socket) => {
 });
 
 // 5. DATABASE & SERVER BOOTSTRAPPING SEQUENCER
-mongoose.connect(process.env.MONGO_URL)
+mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     console.log('✅ Connected safely to MongoDB Database');
     const PORT = process.env.PORT || 5000;
