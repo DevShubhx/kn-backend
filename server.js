@@ -19,7 +19,8 @@ const app = express();
 const ALLOWED_ORIGINS = [
     'http://localhost:3000', 'http://localhost:3001',
     'http://localhost:5173', 'http://localhost:5174',
-    'http://127.0.0.1:3000', 'http://127.0.0.1:5173'
+    'http://127.0.0.1:3000', 'http://127.0.0.1:5173',
+    'https://knfrontend.vercel.app'
 ];
 if (process.env.FRONTEND_PRODUCTION_URL) {
     ALLOWED_ORIGINS.push(process.env.FRONTEND_PRODUCTION_URL.trim());
