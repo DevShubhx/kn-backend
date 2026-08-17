@@ -67,12 +67,10 @@ const ShowSchema = new mongoose.Schema({
     lastEpisodeAddedAt: { 
         type: Date, 
         default: Date.now 
-    }
-},
-{
+    },
 
-     // 📺 100% INDEPENDENT LIVE TV ENGINE FIELDS (For Brand New Premieres)
-    // ये फील्ड्स सिर्फ लाइव टीवी पर ब्रैंड न्यू फाइल चलाने के लिए हैं, वेबसाइट कैटलॉग से इनका कोई संबंध नहीं है
+    // 🎯 FIXED HIGH ACCURACY: लाइव टीवी इंजन फ़ील्ड्स को कड़ाई से पहले कोर-फ़ील्ड्स ब्रैकेट में मर्ज किया गया है
+    // इससे मोंगूस की डेटाबेस लेयर पूरी तरह स्टेबल और सिंक हो जाएगी
     isLiveScheduled: {
         type: Boolean,
         default: false
@@ -95,7 +93,8 @@ const ShowSchema = new mongoose.Schema({
     }
 },
 {
-    // 🔒 PROTECTED setting: Keeps your original creation date engine untouched and locked
+    // 🔒 PROTECTED setting: अब यह दूसरा ब्रैकेट मोंगूस इंजन द्वारा 100% सही तरीके से पढ़ा जाएगा
+    // यह डेटाबेस में प्रत्येक नए शो के साथ खुद-ब-खुद 'createdAt' और 'updatedAt' टाइमस्टैम्प्स को जन्म देगा!
     timestamps: true 
 });
 
